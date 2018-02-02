@@ -15,7 +15,7 @@
 
 BOARD_VENDOR := xiaomi
 
-DEVICE_PATH := device/xiaomi/sagit
+DEVICE_PATH := device/xiaomi/chiron
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
@@ -60,7 +60,7 @@ BOARD_ANT_WIRELESS_DEVICE := "qualcomm-uart"
 
 # Assert
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
-TARGET_OTA_ASSERT_DEVICE := sagit
+TARGET_OTA_ASSERT_DEVICE := chiron
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -239,7 +239,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 #TARGET_USERIMAGES_USE_F2FS := true
 
 # Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_sagit
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_chiron
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # RIL
@@ -255,8 +255,8 @@ include device/qcom/sepolicy/sepolicy.mk
 USE_SENSOR_MULTI_HAL := true
 
 # Vendor init
-TARGET_INIT_VENDOR_LIB := libinit_sagit
-TARGET_RECOVERY_DEVICE_MODULES := libinit_sagit
+TARGET_INIT_VENDOR_LIB := libinit_chiron
+TARGET_RECOVERY_DEVICE_MODULES := libinit_chiron
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
@@ -279,4 +279,4 @@ WIFI_DRIVER_PROBE_DELAY := 15
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # inherit from the proprietary version
--include vendor/xiaomi/sagit/BoardConfigVendor.mk
+-include vendor/xiaomi/chiron/BoardConfigVendor.mk

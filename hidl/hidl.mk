@@ -115,7 +115,7 @@ PRODUCT_PACKAGES += \
 
 # VR
 PRODUCT_PACKAGES += \
-    android.hardware.vr@1.0-service.sagit
+    android.hardware.vr@1.0-service.chiron
 
 # Wifi
 PRODUCT_PACKAGES += \

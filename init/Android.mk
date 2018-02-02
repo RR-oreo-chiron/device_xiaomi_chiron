@@ -23,7 +23,7 @@ LOCAL_C_INCLUDES := \
     system/core/base/include \
     system/core/init
 LOCAL_CFLAGS := -Wall -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
-LOCAL_SRC_FILES := init_sagit.cpp
-LOCAL_MODULE := libinit_sagit
+LOCAL_SRC_FILES := init_chiron.cpp
+LOCAL_MODULE := libinit_chiron
 
 include $(BUILD_STATIC_LIBRARY)

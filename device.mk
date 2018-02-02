@@ -15,9 +15,9 @@
 #
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/xiaomi/sagit/sagit-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/chiron/chiron-vendor.mk)
 # HIDL
-$(call inherit-product, device/xiaomi/sagit/hidl/hidl.mk)
+$(call inherit-product, device/xiaomi/chiron/hidl/hidl.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -111,8 +111,8 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/xiaomi/sagit/prebuilt/system,system) \
-    $(call find-copy-subdir-files,*,device/xiaomi/sagit/prebuilt/root,root)
+    $(call find-copy-subdir-files,*,device/xiaomi/chiron/prebuilt/system,system) \
+    $(call find-copy-subdir-files,*,device/xiaomi/chiron/prebuilt/root,root)
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -279,7 +279,7 @@ PRODUCT_PACKAGES += \
 
 # Recovery
 PRODUCT_PACKAGES += \
-    librecovery_updater_sagit
+    librecovery_updater_chiron
 
 # RIL
 PRODUCT_PACKAGES += \
