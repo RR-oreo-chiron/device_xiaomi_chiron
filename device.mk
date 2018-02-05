@@ -96,6 +96,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf \
     $(LOCAL_PATH)/configs/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/configs/audio/mixer_paths_tasha.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tasha.xml \
+    $(LOCAL_PATH)/configs/audio/mixer_paths_tasha_s.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tasha_s.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/configs/audio/listen_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/listen_platform_info.xml \
     $(LOCAL_PATH)/configs/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
@@ -136,11 +137,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/camera_config.xml:system/etc/camera/camera_config.xml \
-    $(LOCAL_PATH)/configs/camera/imx268_chromatix.xml:system/etc/camera/imx268_chromatix.xml \
-    $(LOCAL_PATH)/configs/camera/imx386_semco_chromatix.xml:system/etc/camera/imx386_semco_chromatix.xml \
-    $(LOCAL_PATH)/configs/camera/s5k3m3_semco_chromatix.xml:system/etc/camera/s5k3m3_semco_chromatix.xml \
-    $(LOCAL_PATH)/configs/camera/sagit_imx268_liteon_chromatix.xml:system/etc/camera/sagit_imx268_liteon_chromatix.xml
-
+    $(LOCAL_PATH)/configs/camera/chiron_imx386_semco_chromatix.xml:system/etc/camera/chiron_imx386_semco_chromatix.xml \
+    $(LOCAL_PATH)/configs/camera/chiron_ov5675_primax_chromatix.xml:system/etc/camera/chiron_ov5675_primax_chromatix.xml \
+    $(LOCAL_PATH)/configs/camera/chiron_ov5675_qtech_chromatix.xml:system/etc/camera/chiron_ov5675_qtech_chromatix.xml
+    
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
     cneapiclient \

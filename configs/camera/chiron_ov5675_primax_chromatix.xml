@@ -79,21 +79,62 @@ special_mode_mask values:
 <ChromatixConfigurationRoot>
   <CommonChromatixInfo>
     <ChromatixName>
-      <ISPCommon>imx268_common</ISPCommon>
-      <PostProc>imx268_postproc</PostProc>
-      <CPPPreview>imx268_cpp_preview</CPPPreview>
-      <CPPSnapshot>imx268_cpp_snapshot</CPPSnapshot>
-      <CPPLiveshot>imx268_cpp_liveshot</CPPLiveshot>
+      <ISPCommon>chiron_ov5675_primax_common</ISPCommon>
+      <PostProc>chiron_ov5675_primax_postproc</PostProc>
+    </ChromatixName>
+    <ChromatixName special_mode_mask="ZOOM_UPSCALE">
+      <CPPSnapshot>chiron_ov5675_primax_cpp_us_chromatix</CPPSnapshot>
+    </ChromatixName>
+    <ChromatixName special_mode_mask="ZOOM_DOWNSCALE">
+      <CPPSnapshot>chiron_ov5675_primax_cpp_ds_chromatix</CPPSnapshot>
     </ChromatixName>
   </CommonChromatixInfo>
   <ResolutionChromatixInfo>
     <ChromatixName sensor_resolution_index="0">
-      <ISPPreview>imx268_snapshot</ISPPreview>
-      <ISPSnapshot>imx268_snapshot</ISPSnapshot>
-      <ISPVideo>imx268_default_video</ISPVideo>
-      <CPPVideo>imx268_cpp_video</CPPVideo>
-      <A3Preview>imx268_zsl_preview_3a</A3Preview>
-      <A3Video>imx268_zsl_video_3a</A3Video>
+      <ISPPreview>chiron_ov5675_primax_snapshot</ISPPreview>
+      <ISPSnapshot>chiron_ov5675_primax_snapshot</ISPSnapshot>
+      <ISPVideo>chiron_ov5675_primax_video_full</ISPVideo>
+      <CPPPreview>chiron_ov5675_primax_cpp_preview</CPPPreview>
+      <CPPSnapshot>chiron_ov5675_primax_cpp_snapshot</CPPSnapshot>
+      <CPPVideo>chiron_ov5675_primax_cpp_preview</CPPVideo>
+      <CPPLiveshot>chiron_ov5675_primax_cpp_liveshot</CPPLiveshot>
+      <A3Preview>chiron_ov5675_primax_zsl_preview</A3Preview>
+      <A3Video>chiron_ov5675_primax_zsl_video</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1">
+      <ISPPreview>chiron_ov5675_primax_snapshot</ISPPreview>
+      <ISPSnapshot>chiron_ov5675_primax_snapshot</ISPSnapshot>
+      <ISPVideo>chiron_ov5675_primax_video_full</ISPVideo>
+      <CPPPreview>chiron_ov5675_primax_cpp_video_full</CPPPreview>
+      <CPPSnapshot>chiron_ov5675_primax_cpp_video_full</CPPSnapshot>
+      <CPPVideo>chiron_ov5675_primax_cpp_video_full</CPPVideo>
+      <CPPLiveshot>chiron_ov5675_primax_cpp_liveshot</CPPLiveshot>
+      <A3Preview>chiron_ov5675_primax_zsl_preview</A3Preview>
+      <A3Video>chiron_ov5675_primax_zsl_video</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="2">
+      <ISPPreview>chiron_ov5675_primax_hfr_60</ISPPreview>
+      <ISPSnapshot>chiron_ov5675_primax_hfr_60</ISPSnapshot>
+      <ISPVideo>chiron_ov5675_primax_hfr_60</ISPVideo>
+      <CPPVideo>chiron_ov5675_primax_cpp_hfr_60</CPPVideo>
+      <A3Preview>chiron_ov5675_primax_a3_hfr_60</A3Preview>
+      <A3Video>chiron_ov5675_primax_a3_hfr_60</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="3">
+      <ISPPreview>chiron_ov5675_primax_hfr_90</ISPPreview>
+      <ISPSnapshot>chiron_ov5675_primax_hfr_90</ISPSnapshot>
+      <ISPVideo>chiron_ov5675_primax_hfr_90</ISPVideo>
+      <CPPVideo>chiron_ov5675_primax_cpp_hfr_90</CPPVideo>
+      <A3Preview>chiron_ov5675_primax_a3_hfr_90</A3Preview>
+      <A3Video>chiron_ov5675_primax_a3_hfr_90</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="4">
+      <ISPPreview>chiron_ov5675_primax_hfr_120</ISPPreview>
+      <ISPSnapshot>chiron_ov5675_primax_hfr_120</ISPSnapshot>
+      <ISPVideo>chiron_ov5675_primax_hfr_120</ISPVideo>
+      <CPPVideo>chiron_ov5675_primax_cpp_hfr_120</CPPVideo>
+      <A3Preview>chiron_ov5675_primax_a3_hfr_120</A3Preview>
+      <A3Video>chiron_ov5675_primax_a3_hfr_120</A3Video>
     </ChromatixName>
   </ResolutionChromatixInfo>
 </ChromatixConfigurationRoot>

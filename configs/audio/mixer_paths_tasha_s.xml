@@ -2152,7 +2152,7 @@
         <ctl name="RX INT6_2 MUX" value="RX7" />
         <ctl name="LINEOUT4 Volume" value="16" />
         <ctl name="Ultrasound Power" value="On" />
-        <ctl name="Ultrasound Mode" value="420" />
+        <ctl name="Ultrasound Mode" value="500" />
     </path>
 
     <path name="ultrasound-mic">

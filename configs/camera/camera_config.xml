@@ -93,16 +93,15 @@ LensInfo : Information of the lens present in the module.
 -->
 
 <CameraConfigurationRoot>
-
   <CameraModuleConfig>
     <CameraId>0</CameraId>
-    <SensorName>imx386_semco</SensorName>
+    <SensorName>chiron_imx386_semco</SensorName>
     <AliasSensorName>Sony_imx386_I</AliasSensorName>
-    <ActuatorName>ak7371</ActuatorName>
-    <EepromName>sagit_imx386_semco</EepromName>
+    <ActuatorName>chiron_imx386_ak7372_semco</ActuatorName>
+    <EepromName>chiron_imx386_semco</EepromName>
     <OisName>bu63164</OisName>
     <FlashName>pmic</FlashName>
-    <ChromatixName>imx386_semco_chromatix</ChromatixName>
+    <ChromatixName>chiron_imx386_semco_chromatix</ChromatixName>
     <ModesSupported>1</ModesSupported>
     <Position>BACK</Position>
     <MountAngle>360</MountAngle>
@@ -113,50 +112,21 @@ LensInfo : Information of the lens present in the module.
       <ComboMode>0</ComboMode>
     </CSIInfo>
     <LensInfo>
-      <FocalLength>3.82</FocalLength>
-      <FNumber>1.8</FNumber>
+      <FocalLength>4.5</FocalLength>
+      <FNumber>2.0</FNumber>
       <TotalFocusDistance>5.0</TotalFocusDistance>
-      <HorizontalViewAngle>65.5</HorizontalViewAngle>
-      <VerticalViewAngle>51.5</VerticalViewAngle>
+      <HorizontalViewAngle>80.1</HorizontalViewAngle>
+      <VerticalViewAngle>80.1</VerticalViewAngle>
       <MinFocusDistance>0.09</MinFocusDistance>
-      <LensType>WIDE</LensType>
-    </LensInfo>
-  </CameraModuleConfig>
-
-  <CameraModuleConfig>
-    <CameraId>1</CameraId>
-    <SensorName>s5k3m3_semco</SensorName>
-    <AliasSensorName>Samsung_s5k3m3_I</AliasSensorName>
-    <ActuatorName>ak7371_s5k3m3_semco</ActuatorName>
-    <EepromName>sagit_s5k3m3_semco</EepromName>
-    <FlashName>pmic</FlashName>
-    <ChromatixName>s5k3m3_semco_chromatix</ChromatixName>
-    <ModesSupported>1</ModesSupported>
-    <Position>BACK_AUX</Position>
-    <MountAngle>360</MountAngle>
-    <CSIInfo>
-      <CSIDCore>2</CSIDCore>
-      <LaneMask>0x1F</LaneMask>
-      <LaneAssign>0x4320</LaneAssign>
-      <ComboMode>0</ComboMode>
-    </CSIInfo>
-    <LensInfo>
-      <FocalLength>6.06</FocalLength>
-      <FNumber>2.6</FNumber>
-      <TotalFocusDistance>5.0</TotalFocusDistance>
-      <HorizontalViewAngle>38.3</HorizontalViewAngle>
-      <VerticalViewAngle>29.2</VerticalViewAngle>
-      <MinFocusDistance>0.5</MinFocusDistance>
-      <LensType>TELE</LensType>
     </LensInfo>
   </CameraModuleConfig>
 
   <CameraModuleConfig>
     <CameraId>2</CameraId>
-    <SensorName>imx268</SensorName>
-    <AliasSensorName>Sony_imx268_I</AliasSensorName>
-    <EepromName>sagit_imx268_primax</EepromName>
-    <ChromatixName>imx268_chromatix</ChromatixName>
+    <SensorName>chiron_ov5675_primax</SensorName>
+    <AliasSensorName>OmniVision_ov5675_I</AliasSensorName>
+    <EepromName>chiron_ov5675_primax</EepromName>
+    <ChromatixName>chiron_ov5675_primax_chromatix</ChromatixName>
     <ModesSupported>1</ModesSupported>
     <Position>FRONT</Position>
     <MountAngle>360</MountAngle>
@@ -167,21 +137,20 @@ LensInfo : Information of the lens present in the module.
       <ComboMode>0</ComboMode>
     </CSIInfo>
     <LensInfo>
-      <FocalLength>3.14</FocalLength>
-      <FNumber>2.2</FNumber>
-      <TotalFocusDistance>0.35</TotalFocusDistance>
-      <HorizontalViewAngle>64.3</HorizontalViewAngle>
-      <VerticalViewAngle>50.5</VerticalViewAngle>
+      <FocalLength>3.3</FocalLength>
+      <FNumber>2.0</FNumber>
+      <TotalFocusDistance>1.97</TotalFocusDistance>
+      <HorizontalViewAngle>69.0</HorizontalViewAngle>
+      <VerticalViewAngle>69.0</VerticalViewAngle>
       <MinFocusDistance>0.35</MinFocusDistance>
     </LensInfo>
   </CameraModuleConfig>
-
   <CameraModuleConfig>
     <CameraId>2</CameraId>
-    <SensorName>sagit_imx268_liteon</SensorName>
-    <AliasSensorName>Sony_imx268_II</AliasSensorName>
-    <EepromName>sagit_imx268_liteon</EepromName>
-    <ChromatixName>sagit_imx268_liteon_chromatix</ChromatixName>
+    <SensorName>chiron_ov5675_qtech</SensorName>
+    <AliasSensorName>OmniVision_ov5675_II</AliasSensorName>
+    <EepromName>chiron_ov5675_qtech</EepromName>
+    <ChromatixName>chiron_ov5675_qtech_chromatix</ChromatixName>
     <ModesSupported>1</ModesSupported>
     <Position>FRONT</Position>
     <MountAngle>360</MountAngle>
@@ -192,13 +161,12 @@ LensInfo : Information of the lens present in the module.
       <ComboMode>0</ComboMode>
     </CSIInfo>
     <LensInfo>
-      <FocalLength>3.14</FocalLength>
-      <FNumber>2.2</FNumber>
-      <TotalFocusDistance>0.35</TotalFocusDistance>
-      <HorizontalViewAngle>64.3</HorizontalViewAngle>
-      <VerticalViewAngle>50.5</VerticalViewAngle>
+      <FocalLength>3.3</FocalLength>
+      <FNumber>2.0</FNumber>
+      <TotalFocusDistance>1.97</TotalFocusDistance>
+      <HorizontalViewAngle>69.0</HorizontalViewAngle>
+      <VerticalViewAngle>69.0</VerticalViewAngle>
       <MinFocusDistance>0.35</MinFocusDistance>
     </LensInfo>
   </CameraModuleConfig>
-
 </CameraConfigurationRoot>

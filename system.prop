@@ -197,8 +197,14 @@ persist.sys.wfd.virtual=0
 ro.wlan.mimo=1
 
 # USB
-sys.usb.configfs=1
+sys.usb.configfs=0
 
 # OTG support
 persist.sys.oem.otg_support=true
 
+# enable navigation bar
+qemu.hw.mainkeys=0
+
+persist.service.adb.enable=1
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb

@@ -47,11 +47,12 @@ char const *heapmaxfree;
 
 static void init_finger_print_properties()
 {
-	if (access("/persist/fpc/calibration_image.pndat", 0) == -1) {
+	/*if (access("/persist/fpc/calibration_image.pndat", 0) == -1) {
 		property_set("ro.boot.fingerprint", "goodix");
 	} else {
 		property_set("ro.boot.fingerprint", "fpc");
-	}
+	}*/
+    property_set("ro.boot.fingerprint", "fpc");
 }
 
 static void init_alarm_boot_properties()
