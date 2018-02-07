@@ -158,6 +158,10 @@ PRODUCT_PACKAGES += \
     libgenlock \
     liboverlay \
     libtinyxml
+    
+# Fingerprint sensor
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service
 
 # For config.fs
 PRODUCT_PACKAGES += \
