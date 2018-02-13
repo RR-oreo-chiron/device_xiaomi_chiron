@@ -1,9 +1,9 @@
 $(call inherit-product, device/xiaomi/chiron/full_chiron.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_chiron
+PRODUCT_NAME := rr_chiron
 PRODUCT_DEVICE := chiron
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI Mix 2

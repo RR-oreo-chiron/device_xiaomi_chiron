@@ -1,1 +1,1 @@
- add_lunch_combo lineage_chiron-userdebug
+ add_lunch_combo rr_chiron-userdebug
