@@ -8,7 +8,6 @@ allow fingerprintd fpc_persist_file:file { open read };
 allow fingerprintd property_socket:sock_file { write };
 allow fingerprintd mpctl_socket:sock_file { write };
 allow fingerprintd init:unix_stream_socket { connectto };
-allow fingerprintd perfd:unix_stream_socket { connectto };
 allow fingerprintd fp_pnstatus_prop:property_service { set };
 
 allow fingerprintd fingerprintd:netlink_socket { create bind read write };

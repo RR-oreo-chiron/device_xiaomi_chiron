@@ -4,7 +4,6 @@ on early-init
     exec u:r:modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules wlan
 
 on init
-    export LD_SHIM_LIBS /system/lib/libMiCameraHal.so|libshim_MiCamera.so
     # Goodix fingerprint
     chown system system /dev/goodix_fp
 
@@ -114,7 +113,7 @@ on property:ro.boot.fingerprint=goodix
    # Generate bt mac
    start bt-mac-generator
 
-service bt-mac-generator /system/vendor/bin/bt-mac-generator
+service bt-mac-generator /vendor/bin/bt-mac-generator
     class main
     user root
     group root
@@ -127,13 +126,13 @@ on property:wc_transport.start_root=true
 on property:wc_transport.start_root=false
     stop hci_filter_root
 
-service hci_filter_root /system/vendor/bin/wcnss_filter
+service hci_filter_root /vendor/bin/wcnss_filter
     class late_start
     user bluetooth
     group bluetooth oem_2950 system
     disabled
 
-service readmac /system/vendor/bin/readmac
+service readmac /vendor/bin/readmac
     class main
     user root
     group root oem_2950

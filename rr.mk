@@ -15,6 +15,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="chiron" \
     PRODUCT_NAME="chiron" \
-    BUILD_FINGERPRINT="Xiaomi/chiron/chiron:7.1.1/NMF26X/V9.0.1.0.NCAMIEI:user/release-keys" \
-    PRIVATE_BUILD_DESC="chiron 7.1.1 NMF26X V9.0.1.0.NCAMIEI release-keys"
-
+    BUILD_FINGERPRINT="Xiaomi/chiron/chiron:8.0.0/OPR1.170623.027/8.3.1:user/release-keys" \
+    PRIVATE_BUILD_DESC="chiron-user 8.0.0 OPR1.170623.027 8.3.1 release-keys"

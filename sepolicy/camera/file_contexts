@@ -1,0 +1,2 @@
+# camera
+/(vendor|system/vendor)/bin/hw/android\.hardware\.camera\.provider@2\.4-service.chiron          u:object_r:hal_camera_default_exec:s0

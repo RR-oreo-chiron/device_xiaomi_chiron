@@ -27,7 +27,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-export PATH=/vendor/bin
+export PATH=/system/bin
 
 # Set platform variables
 if [ -f /sys/devices/soc0/hw_platform ]; then

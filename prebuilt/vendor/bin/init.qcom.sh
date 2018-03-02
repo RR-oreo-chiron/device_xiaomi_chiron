@@ -1,5 +1,4 @@
-#! /vendor/bin/sh
-
+#!/system/bin/sh
 # Copyright (c) 2009-2016, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -81,17 +80,17 @@ start_vm_bms()
 
 start_msm_irqbalance_8939()
 {
-	if [ -f /system/vendor/bin/msm_irqbalance ]; then
+	if [ -f /system/bin/msm_irqbalance ]; then
 		case "$platformid" in
 		    "239" | "293" | "294" | "295" | "304" | "313")
-			start vendor.msm_irqbalance;;
+			start msm_irqbalance;;
 		esac
 	fi
 }
 
 start_msm_irqbalance_8952()
 {
-        if [ -f /system/vendor/bin/msm_irqbalance ]; then
+        if [ -f /system/bin/msm_irqbalance ]; then
                 case "$platformid" in
                      "241" | "263" | "264" | "268" | "269" | "270" | "271")
                         start vendor.msm_irqbalance;;
@@ -105,7 +104,7 @@ start_msm_irqbalance_8952()
 
 start_msm_irqbalance660()
 {
-	if [ -f /vendor/bin/msm_irqbalance ]; then
+	if [ -f /system/bin/msm_irqbalance ]; then
 		case "$platformid" in
 		    "317" | "324" | "325" | "326" | "345" | "346")
 			start vendor.msm_irqbalance;;
@@ -117,8 +116,8 @@ start_msm_irqbalance660()
 
 start_msm_irqbalance()
 {
-	if [ -f /vendor/bin/msm_irqbalance ]; then
-		start vendor.msm_irqbalance
+	if [ -f /system/bin/msm_irqbalance ]; then
+		start msm_irqbalance
 	fi
 }
 
