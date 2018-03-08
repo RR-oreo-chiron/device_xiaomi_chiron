@@ -340,3 +340,8 @@ PRODUCT_COPY_FILES += \
 # Remove packages
 PRODUCT_PACKAGES += \
     RemovePackages
+    
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    persist.sys.usb.config=mtp,diag,adb

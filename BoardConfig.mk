@@ -48,7 +48,8 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8998
-TARGET_KERNEL_CONFIG := sagit_defconfig
+#TARGET_KERNEL_CONFIG := sagit_defconfig
+TARGET_KERNEL_CONFIG := sagit_user_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # Platform
@@ -212,6 +213,7 @@ TARGET_PROVIDES_LIBLIGHT := true
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
+TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # NFC
 BOARD_NFC_HAL_SUFFIX := $(TARGET_BOARD_PLATFORM)
@@ -248,6 +250,9 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 # RIL
 PROTOBUF_SUPPORTED := true
 TARGET_RIL_VARIANT := caf
+
+# SHIMS
+TARGET_LD_SHIM_LIBS := /system/lib/libMiCameraHal.so|libshim_MiCamera.so
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk

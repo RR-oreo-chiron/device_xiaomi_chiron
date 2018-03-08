@@ -80,6 +80,7 @@ debug.sf.latch_unsignaled=1
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 persist.hwc.enable_vds=1
+persist.sys.force_sw_gles=0
 ro.hwui.drop_shadow_cache_size=7
 ro.hwui.gradient_cache_size=1
 ro.hwui.layer_cache_size=64
@@ -215,4 +216,4 @@ qemu.hw.mainkeys=0
 
 persist.service.adb.enable=1
 persist.service.debuggable=1
-persist.sys.usb.config=mtp,adb
+persist.sys.usb.config=mtp,diag,adb
