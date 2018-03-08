@@ -4,7 +4,6 @@ on early-init
     exec u:r:modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules wlan
 
 on init
-    export LD_SHIM_LIBS /system/lib/libMiCameraHal.so|libshim_MiCamera.so
     # Goodix fingerprint
     chown system system /dev/goodix_fp
 

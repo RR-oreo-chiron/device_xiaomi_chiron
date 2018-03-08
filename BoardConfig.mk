@@ -257,6 +257,9 @@ include device/qcom/sepolicy/sepolicy.mk
 # Sensors
 USE_SENSOR_MULTI_HAL := true
 
+# SHIMS
+TARGET_LD_SHIM_LIBS := /system/lib/libMiCameraHal.so|libshim_MiCamera.so
+
 # Vendor init
 TARGET_INIT_VENDOR_LIB := libinit_chiron
 TARGET_RECOVERY_DEVICE_MODULES := libinit_chiron
