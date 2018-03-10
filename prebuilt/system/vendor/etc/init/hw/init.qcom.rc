@@ -1160,10 +1160,15 @@ service poweroffhandler /system/vendor/bin/poweroffhandler
 #on property:ro.logdumpd.enabled=1
 #    start logdumpd
 
+
+on property:vold.decrypt=trigger_restart_min_framework
+    start time_daemon
+    
 service time_daemon /system/vendor/bin/time_daemon
-    class main
+    class late_start
     user root
     group root
+    writepid /dev/cpuset/system-background/tasks
 
 service qdmastatsd /system/vendor/bin/qdmastatsd
     class late_start
