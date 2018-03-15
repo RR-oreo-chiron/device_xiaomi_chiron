@@ -1,4 +1,10 @@
 # Audio
+persist.audio.calfile0=/system/vendor/etc/acdbdata/ChironS/Forte_ChironS_Bluetooth_cal.acdb
+persist.audio.calfile1=/system/vendor/etc/acdbdata/ChironS/Forte_ChironS_General_cal.acdb
+persist.audio.calfile2=/system/vendor/etc/acdbdata/ChironS/Forte_ChironS_Global_cal.acdb
+persist.audio.calfile3=/system/vendor/etc/acdbdata/ChironS/Forte_ChironS_Handset_cal.acdb
+persist.audio.calfile4=/system/vendor/etc/acdbdata/ChironS/Forte_ChironS_Hdmi_cal.acdb
+persist.audio.calfile5=/system/vendor/etc/acdbdata/ChironS/Forte_ChironS_Headset_cal.acdb
 audio.adm.buffering.ms=6
 af.fast_track_multiplier=2
 vendor.audio_hal.period_size=192
@@ -80,21 +86,11 @@ debug.sf.latch_unsignaled=1
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 persist.hwc.enable_vds=1
-ro.hwui.drop_shadow_cache_size=7
-ro.hwui.gradient_cache_size=1
-ro.hwui.layer_cache_size=64
-ro.hwui.path_cache_size=39
-ro.hwui.r_buffer_cache_size=12
-ro.hwui.text_large_cache_height=2048
-ro.hwui.text_large_cache_width=3072
-ro.hwui.text_small_cache_height=2048
-ro.hwui.text_small_cache_width=2048
-ro.hwui.texture_cache_flushrate=0.4
-ro.hwui.texture_cache_size=96
 ro.opengles.version=196610
 ro.sf.lcd_density=480
 sdm.perf_hint_window=50
 vendor.display.enable_default_color_mode=1
+debug.hwui.renderer=skiagl
 
 # DPM
 persist.vendor.dpm.feature=0
@@ -148,14 +144,6 @@ persist.vendor.qti.telephony.vt_cam_interface=1
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.miui.cit,org.cyanogenmod.snap
 vidc.enc.dcvs.extra-buff-count=2
 
-# Memory
-dalvik.vm.heapgrowthlimit=256m
-dalvik.vm.heapmaxfree=8m
-dalvik.vm.heapminfree=4m
-dalvik.vm.heapsize=512m
-dalvik.vm.heapstartsize=16m
-dalvik.vm.heaptargetutilization=0.75
-
 # NFC
 persist.nfc.smartcard.config=SIM1,eSE1
 ro.hardware.nfc_nci=nqx.default
@@ -206,13 +194,18 @@ ro.wlan.mimo=1
 
 # USB
 sys.usb.configfs=1
+persist.sys.usb.config.extra=none
 
 # OTG support
 persist.sys.oem.otg_support=true
 
+# Voice assistant
+ro.opa.eligible_device=true
+
+# Sensors
+ro.qti.sensors.noneui=true
+ro.xiaomi.sar_fusion=true
+
 # enable navigation bar
 qemu.hw.mainkeys=0
 
-persist.service.adb.enable=1
-persist.service.debuggable=1
-persist.sys.usb.config=mtp,diag,adb

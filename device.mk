@@ -15,9 +15,32 @@
 #
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/xiaomi/chiron/chiron-vendor.mk)
+$(call inherit-product, vendor/xiaomi/chiron/chiron-vendor.mk)
 # HIDL
 $(call inherit-product, device/xiaomi/chiron/hidl/hidl.mk)
+
+# Dalvik
+ PRODUCT_PROPERTY_OVERRIDES += \
+     dalvik.vm.heapstartsize=16m \
+     dalvik.vm.heapgrowthlimit=256m \
+     dalvik.vm.heapsize=512m \
+     dalvik.vm.heaptargetutilization=0.75 \
+     dalvik.vm.heapminfree=4m \
+     dalvik.vm.heapmaxfree=8m
+
+# HWUI
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.hwui.texture_cache_size=96 \
+     ro.hwui.layer_cache_size=64 \
+     ro.hwui.r_buffer_cache_size=12 \
+     ro.hwui.path_cache_size=39 \
+     ro.hwui.gradient_cache_size=1 \
+     ro.hwui.drop_shadow_cache_size=7 \
+     ro.hwui.texture_cache_flushrate=0.4 \
+     ro.hwui.text_small_cache_width=2048 \
+     ro.hwui.text_small_cache_height=2048 \
+     ro.hwui.text_large_cache_width=3072 \
+     ro.hwui.text_large_cache_height=4096
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -129,8 +152,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
     android.hardware.bluetooth@1.0-service \
     libbt-vendor \
-    libbthost_if \
-    bt-mac-generator
+    libbthost_if
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -160,10 +182,10 @@ PRODUCT_PACKAGES += \
     libgenlock \
     liboverlay \
     libtinyxml
-    
-# Fingerprint sensor
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service
+
+# FP
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.boot.fingerprint=fpc
 
 # For config.fs
 PRODUCT_PACKAGES += \
@@ -272,12 +294,15 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
-# Privapp Whitelist
+# Perfbootconfig and powerhint
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
+    $(LOCAL_PATH)/configs/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
+    $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
-# Powerhint
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+# Privapp Whitelist and Low power Whitelist
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -317,6 +342,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
+# Set default USB interface and debug
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp,adb \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1
+
 # Wifi
 PRODUCT_PACKAGES += \
     libwpa_client \
@@ -324,13 +355,14 @@ PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
     wificond \
     hostapd \
-    readmac \
+    nv_mac \
     dhcpcd.conf \
     wpa_supplicant \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wifi/sar-vendor-cmd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/sar-vendor-cmd.xml \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 PRODUCT_COPY_FILES += \

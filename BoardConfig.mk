@@ -32,7 +32,9 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a9
 
+TARGET_USES_UEFI := true
 TARGET_USES_64_BIT_BINDER := true
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8998
@@ -257,12 +259,11 @@ include device/qcom/sepolicy/sepolicy.mk
 # Sensors
 USE_SENSOR_MULTI_HAL := true
 
+# Time Service
+BOARD_USES_QC_TIME_SERVICES := true
+
 # SHIMS
 TARGET_LD_SHIM_LIBS := /system/lib/libMiCameraHal.so|libshim_MiCamera.so
-
-# Vendor init
-TARGET_INIT_VENDOR_LIB := libinit_chiron
-TARGET_RECOVERY_DEVICE_MODULES := libinit_chiron
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
