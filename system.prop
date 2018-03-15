@@ -217,6 +217,9 @@ sys.usb.configfs=1
 # OTG support
 persist.sys.oem.otg_support=true
 
+# Voice assistant
+ro.opa.eligible_device=true
+
 # enable navigation bar
 qemu.hw.mainkeys=0
 
