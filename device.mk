@@ -129,8 +129,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
     android.hardware.bluetooth@1.0-service \
     libbt-vendor \
-    libbthost_if \
-    bt-mac-generator
+    libbthost_if
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -324,7 +323,7 @@ PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
     wificond \
     hostapd \
-    readmac \
+    nv_mac \
     dhcpcd.conf \
     wpa_supplicant \
     wpa_supplicant.conf
