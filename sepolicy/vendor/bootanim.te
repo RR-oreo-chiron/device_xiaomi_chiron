@@ -1,0 +1,2 @@
+allow bootanim debug_prop:file read;
+

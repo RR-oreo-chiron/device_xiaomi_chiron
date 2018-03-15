@@ -1,0 +1,53 @@
+#============= hal_nfc_default ==============
+allow hal_nfc_default device:chr_file { ioctl open read write };
+
+#============= hvdcp ==============
+allow hvdcp sysfs:file { getattr open read };
+
+#============= hwservicemanager ==============
+allow hwservicemanager init:binder call;
+
+#============= init ==============
+allow init bt_firmware_file:dir { create setattr };
+allow init firmware_file:dir { create setattr };
+allow init hal_perf_default:binder call;
+allow init hal_perf_hwservice:hwservice_manager find;
+allow init hal_power_hwservice:hwservice_manager add;
+allow init hal_vr_hwservice:hwservice_manager add;
+allow init hidl_base_hwservice:hwservice_manager add;
+allow init hwservicemanager:binder { call transfer };
+allow init proc:lnk_file setattr;
+allow init self:socket ioctl;
+allow init sysfs_usb_supply:dir write;
+allow init system_file:system module_load;
+allow init vendor_file:file execute_no_trans;
+
+#============= modprobe ==============
+allow modprobe vendor_toolbox_exec:file entrypoint;
+
+#============= qti_init_shell ==============
+allow qti_init_shell persist_file:file relabelfrom;
+allow qti_init_shell sensors_data_file:dir setattr;
+allow qti_init_shell sensors_persist_file:dir { relabelfrom relabelto setattr };
+allow qti_init_shell sensors_persist_file:file { relabelfrom relabelto };
+
+#============= rmt_storage ==============
+allow rmt_storage debugfs:file { open write };
+
+#============= surfaceflinger ==============
+allow surfaceflinger hal_display_config_hwservice:hwservice_manager add;
+allow surfaceflinger hal_perf_hwservice:hwservice_manager find;
+
+#============= system_server ==============
+allow system_server device:chr_file { ioctl open read };
+allow system_server init:binder call;
+allow system_server modem_efs_partition_device:blk_file { getattr ioctl open read };
+allow system_server qti_debugfs:file { getattr open read };
+
+#============= tee ==============
+allow tee persist_block_device:blk_file { open read write };
+
+#============= thermal-engine ==============
+allow thermal-engine self:capability { chown fowner };
+allow thermal-engine system_data_file:dir { add_name remove_name write };
+allow thermal-engine system_data_file:file { create getattr open rename setattr write };
