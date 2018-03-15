@@ -15,7 +15,7 @@
 #
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/xiaomi/chiron/chiron-vendor.mk)
+$(call inherit-product, vendor/xiaomi/chiron/chiron-vendor.mk)
 # HIDL
 $(call inherit-product, device/xiaomi/chiron/hidl/hidl.mk)
 
