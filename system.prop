@@ -213,6 +213,7 @@ ro.wlan.mimo=1
 
 # USB
 sys.usb.configfs=1
+persist.sys.usb.config.extra=none
 
 # OTG support
 persist.sys.oem.otg_support=true
