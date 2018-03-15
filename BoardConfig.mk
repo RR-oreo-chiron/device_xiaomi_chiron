@@ -257,6 +257,9 @@ include device/qcom/sepolicy/sepolicy.mk
 # Sensors
 USE_SENSOR_MULTI_HAL := true
 
+# Time Service
+BOARD_USES_QC_TIME_SERVICES := true
+
 # SHIMS
 TARGET_LD_SHIM_LIBS := /system/lib/libMiCameraHal.so|libshim_MiCamera.so
 
