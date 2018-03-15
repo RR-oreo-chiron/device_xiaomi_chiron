@@ -228,6 +228,3 @@ ro.xiaomi.sar_fusion=true
 # enable navigation bar
 qemu.hw.mainkeys=0
 
-persist.service.adb.enable=1
-persist.service.debuggable=1
-persist.sys.usb.config=mtp,diag,adb
