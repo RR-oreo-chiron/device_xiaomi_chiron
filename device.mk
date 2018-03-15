@@ -159,10 +159,10 @@ PRODUCT_PACKAGES += \
     libgenlock \
     liboverlay \
     libtinyxml
-    
-# Fingerprint sensor
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service
+
+# FP
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.boot.fingerprint=fpc
 
 # For config.fs
 PRODUCT_PACKAGES += \
