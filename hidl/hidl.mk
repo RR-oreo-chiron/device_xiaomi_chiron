@@ -62,8 +62,10 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0-java
 
-# Keymaster HAL
+#Enable AOSP KEYMASTER and GATEKEEPER HIDLs
 PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service
 
@@ -117,6 +119,10 @@ PRODUCT_PACKAGES += \
 # VR
 PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-service.chiron
+
+# Weaver
+PRODUCT_PACKAGES += \
+    android.hardware.weaver@1.0
 
 # Wifi
 PRODUCT_PACKAGES += \
