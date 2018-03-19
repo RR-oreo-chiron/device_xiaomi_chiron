@@ -316,13 +316,13 @@
                 <route type="mix" sink="voice_rx"
                        sources="Telephony Rx"/>
                 <route type="mix" sink="primary input"
-                       sources="Wired Headset Mic,BT SCO Headset Mic,FM Tuner,Telephony Rx"/>
+                       sources="Wired Headset Mic,BT SCO Headset Mic,FM Tuner,USB Device In,Telephony Rx"/>
                 <route type="mix" sink="surround_sound"
                        sources="Built-In Mic,Built-In Back Mic"/>
                 <route type="mix" sink="record_24"
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic"/>
                 <route type="mix" sink="mmap_no_irq_in"
-                       sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic"/>
+                       sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,USB Device In"/>
             </routes>
 
         </module>
