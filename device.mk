@@ -19,31 +19,14 @@ $(call inherit-product, vendor/xiaomi/chiron/chiron-vendor.mk)
 # HIDL
 $(call inherit-product, device/xiaomi/chiron/hidl/hidl.mk)
 
-# Dalvik
- PRODUCT_PROPERTY_OVERRIDES += \
-     dalvik.vm.heapstartsize=16m \
-     dalvik.vm.heapgrowthlimit=256m \
-     dalvik.vm.heapsize=512m \
-     dalvik.vm.heaptargetutilization=0.75 \
-     dalvik.vm.heapminfree=4m \
-     dalvik.vm.heapmaxfree=8m
-
-# HWUI
-PRODUCT_PROPERTY_OVERRIDES += \
-     ro.hwui.texture_cache_size=96 \
-     ro.hwui.layer_cache_size=64 \
-     ro.hwui.r_buffer_cache_size=12 \
-     ro.hwui.path_cache_size=39 \
-     ro.hwui.gradient_cache_size=1 \
-     ro.hwui.drop_shadow_cache_size=7 \
-     ro.hwui.texture_cache_flushrate=0.4 \
-     ro.hwui.text_small_cache_width=2048 \
-     ro.hwui.text_small_cache_height=2048 \
-     ro.hwui.text_large_cache_width=3072 \
-     ro.hwui.text_large_cache_height=4096
+$(call inherit-product, vendor/omni/config/phone-xxhdpi-4096-dalvik-heap.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/CarrierConfig
+
+PRODUCT_PACKAGES += \
+    omni_charger_res_images
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -54,7 +37,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
@@ -91,14 +73,8 @@ PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
 # Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_CONFIG := xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
-
-# Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
 # Audio
@@ -149,14 +125,12 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl \
-    android.hardware.bluetooth@1.0-service \
     libbt-vendor \
     libbthost_if
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
+    SnapdragonCamera2 \
     libshim_MiCamera
 
 PRODUCT_COPY_FILES += \
@@ -176,9 +150,13 @@ PRODUCT_PACKAGES += \
     copybit.msm8998 \
     gralloc.msm8998 \
     hwcomposer.msm8998 \
-    memtrack.msm8998 \
-    libdisplayconfig \
     libhwc2on1adapter \
+    libdisplayconfig \
+    libsdmcore \
+    libqservice \
+    libgpu_tonemapper \
+    libqdMetaData.system \
+    memtrack.msm8998 \
     libgenlock \
     liboverlay \
     libtinyxml
@@ -193,6 +171,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    gps.conf \
     libgnss \
     libgps.utils \
     liblocation_api \
@@ -202,7 +181,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
-    $(LOCAL_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
     $(LOCAL_PATH)/configs/gps/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
     $(LOCAL_PATH)/configs/gps/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
     $(LOCAL_PATH)/configs/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
@@ -285,6 +263,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libextmedia_jni \
+    libhypv_intercept \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -369,6 +348,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/configs/wifi/wifi_concurrency_cfg.txt:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifi_concurrency_cfg.txt
 
-# Remove packages
-PRODUCT_PACKAGES += \
-    RemovePackages
