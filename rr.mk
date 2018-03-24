@@ -12,6 +12,9 @@ PRODUCT_MANUFACTURER := Xiaomi
 # Google client ID.
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+# Nfc
+PRODUCT_PROPERTY_OVERRIDES += ro.hardware.nfc_nci=nqx.default
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="chiron" \
     PRODUCT_NAME="chiron" \

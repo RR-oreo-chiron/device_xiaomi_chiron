@@ -7,4 +7,24 @@
     "repository": "android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings"
   }
+  {
+    "repository": "omnirom/android_vendor_nxp-nfc_interfaces_opensource_nfc",
+    "target_path": "vendor/nxp-nfc/interfaces/opensource/nfc",
+    "revision": "android-8.0"
+  },
+  {
+    "repository": "omnirom/android_vendor_nxp-nfc_opensource_frameworks",
+    "target_path": "vendor/nxp-nfc/opensource/frameworks",
+    "revision": "android-8.1"
+  },
+  {
+    "repository": "omnirom/android_vendor_nxp-nfc_opensource_libnfc-nci",
+    "target_path": "vendor/nxp-nfc/opensource/libnfc-nci",
+    "revision": "android-8.1"
+  },
+  {
+    "repository": "omnirom/android_vendor_nxp-nfc_opensource_Nfc",
+    "target_path": "vendor/nxp-nfc/opensource/Nfc",
+    "revision": "android-8.1"
+  },
 ]
