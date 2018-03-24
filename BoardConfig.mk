@@ -254,6 +254,8 @@ TARGET_USES_INTERACTION_BOOST := true
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_USES_QCOM_BSP := false
 TARGET_USE_SDCLANG := true
+# Fix build on Jenkins
+BOARD_USES_VENDOR_QCOM := false
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/recovery.fstab
