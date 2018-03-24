@@ -1,6 +1,5 @@
 r_dir_file(hal_bluetooth, bt_firmware_file)
 
-
 allow hal_bluetooth_default bluetooth:unix_stream_socket connectto;
 allow hal_bluetooth_default sysfs:file write;
 
@@ -18,3 +17,4 @@ allow hal_bluetooth system_server:binder call;
 
 set_prop(hal_bluetooth_default, bluetooth_prop)
 
+allow hal_bluetooth_default sysfs_bt_device:file write;

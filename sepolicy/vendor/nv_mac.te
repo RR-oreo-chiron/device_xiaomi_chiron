@@ -1,0 +1,16 @@
+type nv_mac, domain;
+type nv_mac_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(nv_mac)
+allow nv_mac nv_data_file:dir { search };
+allow nv_mac nv_data_file:file { r_file_perms };
+allow nv_mac persist_file:dir { search };
+allow nv_mac persist_file:file { rw_file_perms };
+allow nv_mac persist_file:dir setattr;
+allow nv_mac self:capability { dac_override dac_read_search };
+allow nv_mac sysfs_data:file read;
+allow nv_mac nv_mac_persist_file:file { read open setattr write};
+allow nv_mac self:capability { fowner fsetid };
+allow nv_mac sysfs_data:file { open read write setattr };
+allow nv_mac self:socket create;
+dontaudit nv_mac self:socket ioctl;
+

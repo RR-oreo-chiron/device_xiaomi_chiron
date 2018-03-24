@@ -18,7 +18,7 @@ allow dashd rootfs:file { entrypoint read };
 allow dashd self:netlink_kobject_uevent_socket { bind create read setopt };
 
 allow dashd sysfs_batteryinfo:file r_file_perms;
-r_dir_file(dashd, sysfs_usb_supply);
+#r_dir_file(dashd, sysfs_usb_supply);
 r_dir_file(dashd, sysfs_battery_supply)
 
 allow dashd self:capability2 block_suspend;

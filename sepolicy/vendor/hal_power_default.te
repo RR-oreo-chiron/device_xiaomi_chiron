@@ -11,3 +11,7 @@ allow hal_power_default debugfs_rpm:file r_file_perms;
 allow hal_power_default debugfs_wlan:dir r_dir_perms;
 allow hal_power_default debugfs_wlan:file r_file_perms;
 ')
+
+allow hal_power_default sysfs_input:file { open write };
+allow hal_power_default sysfs_input:dir search;
+allow hal_power_default debugfs_wifi:file { getattr open read };

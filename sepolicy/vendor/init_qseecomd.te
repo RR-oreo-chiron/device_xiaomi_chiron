@@ -8,4 +8,3 @@ allow init_qseecomd vendor_toolbox_exec:file rx_file_perms;
 
 allow init_qseecomd shell_exec:file { getattr read };
 allow init_qseecomd toolbox_exec:file { execute execute_no_trans getattr open read };
-

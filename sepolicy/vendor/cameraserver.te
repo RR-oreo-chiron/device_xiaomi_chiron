@@ -26,11 +26,9 @@ allow cameraserver sysfs:file { open write };
 
 allow cameraserver cameraserver:process { execmem };
 
-####
 allow cameraserver debug_prop:file { r_file_perms };
 allow cameraserver debug_prop:property_service set;
 
-#######
 #allow cameraserver persist_file:file rw_file_perms;
 #allow cameraserver persist_file:file setattr;
 allow cameraserver shell_exec:file { read open execute };
@@ -45,12 +43,12 @@ allow cameraserver system_file:file execute;
 
 allow cameraserver debugfs:dir { read open };
 
-
-
 allow cameraserver nfc_data_file:file { open write };
 allow cameraserver socket_device:sock_file write;
 
 allow cameraserver hal_perf_default:binder call;
 
-#rtty
+allow cameraserver sysfs_video4linux:dir search;
+allow cameraserver sysfs_video4linux:file { read open };
+
 allow cameraserver hal_perf_hwservice:hwservice_manager find;

@@ -4,4 +4,4 @@ allow hal_wifi_default location:unix_stream_socket connectto;
 allow hal_wifi_default location_data_file:dir search;
 allow hal_wifi_default location_socket:sock_file write;
 
-
+allow hal_wifi_default sysfs_wifi:file { w_file_perms };

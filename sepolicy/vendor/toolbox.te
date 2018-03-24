@@ -20,15 +20,11 @@ allow toolbox self:udp_socket ioctl;
 allow toolbox sensors_persist_file:dir getattr;
 allow toolbox sysfs:file { getattr setattr };
 
-
 allow toolbox radio_data_file:dir { getattr search };
 allow toolbox radio_data_file:file { getattr open read setattr };
-
 
 allow toolbox firmware_file:file { open read };
 allow toolbox init:fifo_file ioctl;
 
-
 allow toolbox bluetooth_prop:property_service set;
 allow toolbox sensors_prop:property_service set;
-

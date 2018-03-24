@@ -5,6 +5,5 @@ allow mediacodec socket_device:sock_file write;
 allow mediacodec perfd:unix_stream_socket connectto;
 allow mediacodec perfd_socket:sock_file write;
 
-
 allow mediacodec debug_prop:file read;
 
