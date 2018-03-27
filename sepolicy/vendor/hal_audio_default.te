@@ -1,0 +1,13 @@
+allow hal_audio_default debug_prop:file { getattr open read };
+
+allow hal_audio_default init:unix_stream_socket connectto;
+allow hal_audio_default socket_device:sock_file write;
+
+allow hal_audio_default perfd:unix_stream_socket connectto;
+allow hal_audio_default perfd_socket:sock_file write;
+
+allow hal_audio_default media_rw_data_file:file { read open getattr };
+allow hal_audio_default persist_file:dir { open read search };
+
+allow hal_audio_default persist_amp_cal_file:file { open read getattr };
+allow hal_audio_default persist_usf_cal_file:file { open read getattr };

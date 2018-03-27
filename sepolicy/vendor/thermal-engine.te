@@ -1,0 +1,26 @@
+set_prop(thermal-engine, debug_prop)
+allow thermal-engine sysfs_kgsl:file { getattr open read };
+allow thermal-engine sysfs_batteryinfo:file r_file_perms;
+
+allow thermal-engine sysfs_uio:dir { open read search };
+allow thermal-engine sysfs_uio:lnk_file read;
+allow thermal-engine sysfs_uio_file:dir search;
+allow thermal-engine sysfs_uio_file:file { getattr open read };
+
+type_transition thermal-engine system_data_file:file thermal_data_file "decrypt.txt";
+
+allow thermal-engine thermal_data_file:file { create_file_perms };
+
+allow thermal-engine thermal_dump_file:dir rw_dir_perms;
+allow thermal-engine thermal_dump_file:file { getattr create_file_perms };
+
+allow thermal-engine sysfs_power_supply:dir search;
+allow thermal-engine sysfs_power_supply:file { open read write };
+
+allow thermal-engine self:capability chown;
+allow thermal-engine system_data_file:dir write;
+allow thermal-engine self:capability fowner;
+
+allow thermal-engine system_data_file:dir { add_name remove_name };
+
+allow thermal-engine socket_device:sock_file { create setattr };

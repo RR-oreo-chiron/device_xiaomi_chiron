@@ -1,0 +1,7 @@
+set_prop(audioserver, debug_prop);
+
+# Callbacks in response to rild IPC into audioserver
+binder_call(audioserver, rild)
+
+r_dir_file(audioserver, persist_amp_cal_file)
+r_dir_file(audioserver, persist_usf_cal_file)

@@ -1,0 +1,5 @@
+allow hal_bluetooth_qti nv_data_file:dir { search open };
+allow hal_bluetooth_qti nv_data_file:file { open read getattr };
+allow hal_bluetooth_qti nv_mac_data_file:file { open read getattr };
+allow hal_bluetooth_qti nv_mac_persist_file:file { open read getattr };
+

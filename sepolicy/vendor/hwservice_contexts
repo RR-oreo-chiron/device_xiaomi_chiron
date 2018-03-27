@@ -1,0 +1,8 @@
+com.qualcomm.qti.ims.radio::IImsRadio                           u:object_r:vnd_ims_radio_hwservice:s0
+com.qualcomm.qti.imsrtpservice::IRTPService                     u:object_r:hal_imsrtp_hwservice:s0
+
+com.fingerprints.extension::IFingerprintEngineering u:object_r:fingerprint_extension_hwservice:s0
+com.fingerprints.extension::IFingerprintSensorTest  u:object_r:fingerprint_extension_hwservice:s0
+com.fingerprints.extension::IFingerprintNavigation  u:object_r:fingerprint_extension_hwservice:s0
+
+
