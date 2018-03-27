@@ -1,1 +1,0 @@
-allow modprobe vendor_toolbox_exec:file entrypoint;

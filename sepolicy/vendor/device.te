@@ -1,5 +1,0 @@
-type fingerprintd_device, dev_type;
-type persist_block_device, dev_type;
-
-type thermal_switch_device, dev_type;
-type sound_device, dev_type;
