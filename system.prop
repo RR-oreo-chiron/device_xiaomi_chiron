@@ -1,0 +1,6 @@
+# Sensors
+ro.qti.sensors.noneui=true
+ro.xiaomi.sar_fusion=true
+
+# enable navigation bar
+qemu.hw.mainkeys=0
