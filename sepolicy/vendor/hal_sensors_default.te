@@ -12,3 +12,7 @@ allow hal_sensors_default self:capability2 block_suspend;
 
 allow hal_sensors_default debug_prop:property_service set;
 
+allow hal_sensors_default servicemanager:binder call;
+allow hal_sensors_default sound_device:chr_file { read open ioctl };
+allow hal_sensors_default audioserver_service:service_manager find;
+allow hal_sensors_default audioserver:binder call;

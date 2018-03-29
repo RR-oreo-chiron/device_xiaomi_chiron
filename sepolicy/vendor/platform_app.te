@@ -1,2 +1,2 @@
 allow platform_app storage_stub_file:dir getattr;
-
+allow platform_app qemu_hw_mainkeys_prop:file { read open };

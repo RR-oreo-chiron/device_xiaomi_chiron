@@ -24,3 +24,4 @@ allow thermal-engine self:capability fowner;
 allow thermal-engine system_data_file:dir { add_name remove_name };
 
 allow thermal-engine socket_device:sock_file { create setattr };
+allow thermal-engine system_prop:property_service set;

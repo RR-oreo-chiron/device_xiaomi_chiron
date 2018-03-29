@@ -11,3 +11,4 @@ allow rild audioserver_service:service_manager find;
 allow rild vendor_file:file ioctl;
 
 allow rild tombstone_data_file:dir search;
+allow rild system_prop:property_service set;

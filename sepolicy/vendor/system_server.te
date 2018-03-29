@@ -27,3 +27,4 @@ allow system_server sysfs_fpc_wakeup:file rw_file_perms;
 allow system_server qti_debugfs:file { read open getattr };
 allow system_server debugfs_mem:file { read open getattr };
 dontaudit system_server dalvikcache_data_file:file { execute write };
+allow system_server sysfs_input:file write;
