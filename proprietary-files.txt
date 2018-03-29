@@ -171,9 +171,6 @@ vendor/lib/libmmcamera_chiron_ov5675_qtech.so
 # Display calibration data
 etc/jdi_fhd_video_dsi_panel_ct.xml
 
-# Fingerprint
-vendor/lib64/hw/fingerprint.fpc.so
-
 # Sensors
 etc/elliptic_sensor.xml
 vendor/etc/sensors/hals.conf
