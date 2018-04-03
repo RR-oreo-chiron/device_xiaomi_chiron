@@ -40,7 +40,10 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # SELinux
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+# BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
+# SHIMS
+TARGET_LD_SHIM_LIBS := /system/lib/libMiCameraHal.so|libshim_MiCamera.so
 
 # Inherit from proprietary files
 include vendor/xiaomi/chiron/BoardConfigVendor.mk
